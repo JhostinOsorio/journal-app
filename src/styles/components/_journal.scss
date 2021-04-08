@@ -1,0 +1,223 @@
+.journal__main-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  height: 100vh;
+}
+
+.journal__aside {
+  background-color: $dark-grey;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.aside__header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1em;
+  padding: .5em;
+}
+
+.aside__title {
+  margin: 0;
+  margin-top: .75em;
+}
+
+.aside__button {
+  margin-top: 1em;
+  padding: .5em;
+}
+
+.btn-entry {
+  border: 1px solid white;
+  outline: none;
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  cursor: pointer;
+  align-items: center;
+  background-color: $dark-grey;
+  color: white;
+  justify-content: center;
+  border-radius: .25em;
+  transition: background-color .2s ease-out;
+
+  &:hover {
+    background-color: darken($color: $dark-grey, $amount: 10);
+  }
+
+  &__text {
+    margin-left: 1em;
+  }
+}
+
+.journal__nav {
+  margin-top: 1em;
+  flex: 1;
+  overflow-x: visible;
+  overflow-y: auto;
+  margin-bottom: 1em;
+}
+
+.journal__nav::-webkit-scrollbar {
+  background-color: lighten($color: $dark-grey, $amount: 40);
+  width: .85rem;
+  border-radius: .5em;
+  margin-right: 1em;
+}
+
+.journal__nav::-webkit-scrollbar-thumb {
+  background-color: lighten($color: $dark-grey, $amount: 20);
+  border: 3px solid lighten($color: $dark-grey, $amount: 40);
+  border-radius: .5em;
+}
+
+.journal__nav::-webkit-scrollbar-thumb:hover {
+  background-color: lighten($color: $dark-grey, $amount: 10);
+}
+
+.journal__list {
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+  padding: 0 .5em;
+}
+
+.journal__item {
+  align-items: center;
+  display: flex;
+  background-color: white;
+  padding: .25rem;
+  cursor: pointer;
+  border-radius: .25em;
+  color: $dark-grey;
+  transition: background-color .1s ease-out;
+
+  &:hover {
+    background-color: darken($color: white, $amount: 10);
+  }
+}
+
+.journal__item:not(.journal__item:last-child) {
+  margin-bottom: .5em;
+}
+
+.item__picture {
+  overflow: hidden;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.item__img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.item__body {
+  flex: 1;
+  padding: .25em;
+}
+
+.item__title {
+  font-size: 12px;
+  margin-bottom: .05em;
+  margin-top: 0;
+}
+
+.item__content {
+  font-size: 10px;
+  margin-top: .05em;
+  margin-bottom: 0;
+}
+
+.item__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: .25em;
+}
+
+.item__month {
+  font-size: 12px;
+}
+
+.item__day {
+  margin: 0;
+}
+
+.journal__right {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.journal__navbar {
+  align-items: center;
+  background-color: lighten($color: $dark-grey, $amount: 20);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: .5em 1em;
+  box-shadow: 0 0 2px $dark-grey inset;
+  height: 3rem;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__bar {
+  cursor: pointer;
+  transition: color .1s ease-out;
+  margin-right: 1em;
+
+  &:hover {
+    color: darken($color: white, $amount: 10);
+  }
+}
+.navbar__title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.btn-logout {
+  font-size: 1rem;
+  color: white;
+  padding: .5em 1em;
+  background-color: $dark-grey;
+  border: none;
+  outline: none;
+  border-radius: .25em;
+  cursor: pointer;
+  transition: background-color .1s ease-out;
+
+  &:hover {
+    background-color: darken($color: $dark-grey, $amount: 5);
+  }
+}
+
+.journal__main {
+  flex: 1;
+}
+
+.nothing__main-content {
+  padding: 1em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: $primary;
+  text-align: center;
+}
